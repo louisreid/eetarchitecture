@@ -5,8 +5,8 @@
 .site-nav {
     display: inline-block;
     margin-bottom: 2em;
-    @extend .bg-transparent;
+    @extend .bg-block;
     @extend .font-pt-mono;
-    @extend .text-border-left;
-    @include box-shadow;
+    @extend .block-padding-left;
+    @include text-padding-right;
 }
