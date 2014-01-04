@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    OBJECTS/PAGE-CONTENT.SCSS
+\*------------------------------------*/
+
+.page-content {
+    width: 50%;
+    @extend .text-border-left;
+    p { 
+        padding: 0.2em 0;
+        display: inline;
+        @extend .bg-transparent;
+        @include box-shadow($grey-alpha, 10px);
+    }
+}

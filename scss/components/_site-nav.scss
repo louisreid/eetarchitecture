@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    COMPONENTS/SITE-NAV.SCSS
+\*------------------------------------*/
+
+.site-nav {
+    display: inline-block;
+    margin-bottom: 2em;
+    @extend .bg-transparent;
+    @extend .font-pt-mono;
+    @extend .text-border-left;
+    @include box-shadow;
+}

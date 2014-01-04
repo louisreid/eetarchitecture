@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    COMPONENTS/SITE-HEADER.SCSS
+\*------------------------------------*/
+
+.site-header {
+    margin-top: 1em;
+    @extend .text-border-left;
+    h1 {
+        display: inline-block;
+        @extend .bg-transparent;
+        @include box-shadow($grey-alpha, 0.2em);
+    }
+}
+

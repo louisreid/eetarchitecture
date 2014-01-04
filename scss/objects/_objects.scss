@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    OBJECTS/OBJECTS.SCSS
+\*------------------------------------*/
+
+@mixin box-shadow ($color: $grey-alpha, $width: 1em) {
+    box-shadow: $width 0 0 $grey-alpha, -$width 0 0 $grey-alpha;
+}
+
+
+.bg-transparent {
+    background-color: $grey-alpha;
+}
+
+.text-border-left {
+    border-left: $grey-alpha 10px;
+    margin-left:10px;
+}
+
+.fullpage {
+    position: absolute;
+    top: 0; bottom: 0; right: 0; left: 0;
+}
+
+.page-bg--img {
+    z-index: -100;
+    @extend .fullpage;
+    background: url('/img/wood-sml.jpg') no-repeat center top;
+    background-size: contain;
+    @include media-query(palm) {
+        background-size: auto auto;        
+    }
+}
+
+.pack-bg--gradient {
+    
+}
