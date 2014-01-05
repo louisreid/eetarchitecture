@@ -1,3 +1,0 @@
-$(function () {
-    $('.lightbox-link').fluidbox();
-})

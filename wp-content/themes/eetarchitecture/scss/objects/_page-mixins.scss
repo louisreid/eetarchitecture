@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    OBJECTS/PAGE-MIXINS.SCSS
+\*------------------------------------*/
+
+@mixin text-padding-right ($color: $grey-alpha, $width: 1em) {
+    box-shadow: $width 0 0 $grey-alpha, -$width 0 0 $grey-alpha;
+}
+
+@mixin block-clear {
+    &:after {
+        // content: '\A';
+        // white-space: pre;
+        display: block;
+        border-bottom: 0;
+    }
+}

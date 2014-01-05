@@ -7,8 +7,8 @@ module.exports = function(grunt) {
         compass: {
             dist: {
                 options: {
-                    sassDir: 'scss',
-                    cssDir: 'css',
+                    sassDir: 'wp-content/themes/eetarchitecture/scss',
+                    cssDir: 'wp-content/themes/eetarchitecture/css',
                     environment: 'production',
                     outputStyle: 'expanded'
                 }
@@ -16,21 +16,19 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            files: ['scss/*.scss','scss/**/*.scss'],
+            files: ['wp-content/themes/eetarchitecture/scss/*.scss','wp-content/themes/eetarchitecture/scss/**/*.scss'],
             tasks: 'compass'
         },
 
         browser_sync: {
             dev: {
                 bsFiles: {
-                    src: ['css/*.css','**/*.html']
+                    src: ['wp-content/themes/eetarchitecture/css/*.css','wp-content/themes/eetarchitecture/**/*.html']
                 },
                 options: {
                     watchTask: true,
                     debugInfo: true,
-                    server: {
-                        baseDir: "."
-                    }
+                    host: "192.168.0.33"
                 }
             }
         }
