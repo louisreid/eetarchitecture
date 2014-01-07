@@ -1,3 +1,3 @@
 $(function () {
-    $('.page-content a').fluidbox();
+    $('.lightbox--link').fluidbox();
 })

@@ -42,18 +42,19 @@
 
 .page-bg {
     z-index: -100;
-    position: absolute;
+    position: fixed;
     top: 0; bottom: 0; right: 0; left:0;
-    background-color: black;
+    background-size: cover;
+    background-position: center;
 }
 
-.page-bg--img {
-    img {
-        z-index: -90;
-        width: 100%;
-        min-width: $lap-start;
-    }
-}
+// .page-bg--img {
+//     img {
+//         z-index: -90;
+//         width: 100%;
+//         min-width: $lap-start;
+//     }
+// }
 
 // .page-bg--gradient {
 //     display: block;
@@ -105,3 +106,22 @@
         text-transform: uppercase;
     }
 }
+
+.arve-wrapper {
+    @extend .block-padding;
+    @extend .block-padding-left;
+    @extend .bg-block;
+    margin-bottom: 0;
+}
+
+.nav-below {
+    margin-top: 2em;
+    margin-bottom: 4em;
+    p {
+        display: inline-block;
+        @extend .font-pt-mono;
+        font-size: 1em;
+        text-transform: uppercase;
+        
+    }
+}   

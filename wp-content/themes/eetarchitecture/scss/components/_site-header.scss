@@ -2,7 +2,17 @@
     COMPONENTS/SITE-HEADER.SCSS
 \*------------------------------------*/
 
-.site-header {
-    margin-top: 1em;
+
+.site-header--text {
+    text-transform: uppercase;
+    h1 {
+        width: 100%;
+    }
+    a {
+        text-decoration: none;
+        &:hover {
+            color: $link-black;
+        }
+    }
 }
 

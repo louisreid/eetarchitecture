@@ -7,7 +7,6 @@
 .font-lato { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }
 
 h1,h2,h3,h4,h5,h6 {
-    z-index: -10;
     margin: 0;
     color: $text-black;
     display: inline-block;
@@ -16,7 +15,9 @@ h1,h2,h3,h4,h5,h6 {
     @include block-clear;
 }
 
-h2, h3,h4,h5,h6 { @extend .font-pt-mono; }
+h2,h3,h4,h5,h6 { 
+    @extend .font-pt-mono; 
+}
 // h2 { @extend .font-oswald; }
 
 h1 {

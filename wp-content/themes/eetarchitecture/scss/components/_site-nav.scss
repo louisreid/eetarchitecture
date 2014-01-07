@@ -3,10 +3,23 @@
 \*------------------------------------*/
 
 .site-nav {
-    display: inline-block;
     margin-bottom: 2em;
-    @extend .bg-block;
-    @extend .font-pt-mono;
-    @extend .block-padding-left;
-    @include text-padding-right;
+    ul {
+        display: inline-block;
+        left:0;
+        @extend .cf;
+        margin: 0;
+        padding: 0;
+        padding-right: 10px;
+        @extend .font-pt-mono;
+        font-size: 1em;
+        li {
+            margin:0;
+            float: left;
+            padding-left: 12px;
+            a {
+                text-transform: uppercase;
+            }
+        }
+    }
 }

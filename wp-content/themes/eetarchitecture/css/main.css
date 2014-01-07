@@ -846,7 +846,7 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after {
+.cf:after, .site-nav ul:after {
   content: "";
   display: table;
   clear: both;
@@ -2948,7 +2948,7 @@ body {
   font-family: 'Oswald', sans-serif;
 }
 
-.font-pt-mono, h2, h3, h4, h5, h6, .post-list a, .site-nav {
+.font-pt-mono, h2, h3, h4, h5, h6, .post-list a, .nav-below p, .site-nav ul {
   font-family: 'PT Mono', sans-serif;
 }
 
@@ -2957,14 +2957,12 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  z-index: -10;
   margin: 0;
   color: #1f1f1f;
   display: inline-block;
 }
 h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
   display: block;
-  border-bottom: 0;
 }
 
 h1 {
@@ -3026,18 +3024,18 @@ a, a:hover, a:active, a:visited {
 /*------------------------------------*\
     OBJECTS/OBJECTS.SCSS
 \*------------------------------------*/
-.bg-block, h1, h2, h3, h4, h5, h6, p, pre, ul, ol, dl, .page-content img, .page-content table, caption, fieldset, .post-list a, .site-nav {
+.bg-block, h1, h2, h3, h4, h5, h6, p, pre, ul, ol, dl, .page-content img, .page-content table, caption, fieldset, .post-list a, .arve-wrapper {
   background-color: white;
 }
 
 /*------------------------------------*\
     BLOCK PADDING
 \*------------------------------------*/
-.block-padding-left, h1, h2, h3, h4, h5, h6, p, pre, ul, ol, dl, .post-list a, .site-nav {
+.block-padding-left, h1, h2, h3, h4, h5, h6, p, pre, ul, ol, dl, .post-list a, .arve-wrapper {
   position: relative;
   left: 10px;
 }
-.block-padding-left:before, h1:before, h2:before, h3:before, h4:before, h5:before, h6:before, p:before, pre:before, ul:before, ol:before, dl:before, .post-list a:before, .site-nav:before {
+.block-padding-left:before, h1:before, h2:before, h3:before, h4:before, h5:before, h6:before, p:before, pre:before, ul:before, ol:before, dl:before, .post-list a:before, .arve-wrapper:before {
   position: absolute;
   right: 100%;
   top: -0px;
@@ -3048,7 +3046,7 @@ a, a:hover, a:active, a:visited {
   width: 10px;
 }
 
-.block-padding, p, pre, ul, ol, dl, .page-content img, .page-content table, caption, fieldset, .post-list a {
+.block-padding, p, pre, ul, ol, dl, .page-content img, .page-content table, caption, fieldset, .post-list a, .arve-wrapper {
   margin-bottom: 0;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -3064,18 +3062,13 @@ a, a:hover, a:active, a:visited {
 \*------------------------------------*/
 .page-bg {
   z-index: -100;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: black;
-}
-
-.page-bg--img img {
-  z-index: -90;
-  width: 100%;
-  min-width: 481px;
+  background-size: cover;
+  background-position: center;
 }
 
 /*------------------------------------*\
@@ -3103,6 +3096,20 @@ a, a:hover, a:active, a:visited {
 .post-list a {
   font-size: 1.5em;
   line-height: 2.5em;
+  text-transform: uppercase;
+}
+
+.arve-wrapper {
+  margin-bottom: 0;
+}
+
+.nav-below {
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
+.nav-below p {
+  display: inline-block;
+  font-size: 1em;
   text-transform: uppercase;
 }
 
@@ -3146,17 +3153,40 @@ a, a:hover, a:active, a:visited {
 /*------------------------------------*\
     COMPONENTS/SITE-HEADER.SCSS
 \*------------------------------------*/
-.site-header {
-  margin-top: 1em;
+.site-header--text {
+  text-transform: uppercase;
+}
+.site-header--text h1 {
+  width: 100%;
+}
+.site-header--text a {
+  text-decoration: none;
+}
+.site-header--text a:hover {
+  color: #1c1c1c;
 }
 
 /*------------------------------------*\
     COMPONENTS/SITE-NAV.SCSS
 \*------------------------------------*/
 .site-nav {
-  display: inline-block;
   margin-bottom: 2em;
-  box-shadow: 1em 0 0 white, -1em 0 0 white;
+}
+.site-nav ul {
+  display: inline-block;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  padding-right: 10px;
+  font-size: 1em;
+}
+.site-nav ul li {
+  margin: 0;
+  float: left;
+  padding-left: 12px;
+}
+.site-nav ul li a {
+  text-transform: uppercase;
 }
 
 /*------------------------------------*\
