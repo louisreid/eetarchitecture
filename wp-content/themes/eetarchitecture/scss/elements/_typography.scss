@@ -4,7 +4,7 @@
 
 .font-oswald { font-family: 'Oswald', sans-serif; }
 .font-pt-mono { font-family: 'PT Mono', sans-serif; }
-.font-lato { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }
+.font-helvetica { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }
 
 h1,h2,h3,h4,h5,h6 {
     margin: 0;
@@ -50,7 +50,7 @@ h6 {
 p, pre, ul, ol, dl {
     font-size: 0.8em;
     display: block;
-    @extend .font-lato;
+    @extend .font-helvetica;
     @extend .bg-block;
     @extend .block-padding-left;
     @extend .block-padding;
