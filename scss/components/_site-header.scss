@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    COMPONENTS/SITE-HEADER.SCSS
+\*------------------------------------*/
+
+
+.site-header--text {
+    text-transform: uppercase;
+    width: 100%;
+    a {
+        text-decoration: none;
+        &:hover {
+            color: $link-black;
+        }
+    }
+}
+
